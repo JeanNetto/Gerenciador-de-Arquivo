@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Arquivos</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background: #000000;
+    color: white;
+    padding: 10px 0;}
+main {
+    margin-top: 20px;
+}
+.file-upload, .file-edit {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+    </style>
+    <header>
+        <h1>Gerenciador de Arquivos</h1>
+    </header>
+    <main>
+        <section class="file-upload">
+            <h2>Escolha um Arquivo</h2>
+            <input type="file" id="fileInput" accept=".txt">
+            <button onclick="loadFile()">Carregar</button>
+        </section>
+        <section class="file-edit">
+            <h2>Modifique o Arquivo</h2>
+            <textarea id="fileContent" rows="10" cols="50" placeholder="Carregue um arquivo para editar..."></textarea>
+            <br>
+            <button onclick="downloadFile()">Baixar Arquivo Modificado</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
